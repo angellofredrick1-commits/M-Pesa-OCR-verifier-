@@ -1,0 +1,23 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+# Reading a multi-page scanned licence regularly takes longer than the default
+# synchronous timeout. Raise it as far as your plan allows — on some plans the
+# ceiling is 26s and has to be enabled by Netlify support before this line takes
+# effect. Check the current limit for your plan before assuming this applies.
+[functions."extract"]
+  timeout = 26
+  memory = 1024
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"
