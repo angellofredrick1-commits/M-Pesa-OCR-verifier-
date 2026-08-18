@@ -118,14 +118,14 @@
   .bizname{font-size:18px;font-weight:700;letter-spacing:-.015em;margin:0}
   .doctype{font-size:12px;color:var(--mute);margin-top:5px}
 
-  .badge{flex:none;border-radius:12px;padding:9px 14px;text-align:right;background:var(--pale);min-width:118px}
-  .badge .st{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
-  .badge small{display:block;font-size:11px;font-weight:500;color:var(--mute);margin-top:2px}
-  .b-active{background:#F2F7EA} .b-active .st{color:var(--green)}
-  .b-expired{background:var(--pale)} .b-expired .st{color:var(--red)}
-  .b-soon{background:#FDF3E2} .b-soon .st{color:var(--orange)}
-  .b-review{background:#E9F3F5} .b-review .st{color:var(--aqua)}
-  .b-plain{background:#F4F2F2} .b-plain .st{color:var(--mute)}
+  .badge{flex:none;border-radius:12px;padding:10px 16px;text-align:right;background:var(--mute);min-width:126px;color:#fff}
+  .badge .st{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+  .badge small{display:block;font-size:11px;font-weight:600;color:rgba(255,255,255,.88);margin-top:2px}
+  .b-active{background:var(--green)}
+  .b-expired{background:var(--red)}
+  .b-soon{background:var(--orange)}
+  .b-review{background:var(--aqua)}
+  .b-plain{background:var(--mute)}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px 22px;margin-top:18px;padding:16px 18px;background:var(--pale-2);border-radius:12px}
   .f label{display:block;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
@@ -145,11 +145,11 @@
   tr:last-child td{border-bottom:0}
   tr:hover td{background:var(--pale-2)}
   td.na{color:#B9B2B2}
-  .pill{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 11px;border-radius:999px;background:var(--pale);color:var(--red)}
-  .pill.p-active{background:#F2F7EA;color:var(--green)}
-  .pill.p-soon{background:#FDF3E2;color:var(--orange)}
-  .pill.p-review{background:#E9F3F5;color:var(--aqua)}
-  .pill.p-plain{background:#F4F2F2;color:var(--mute)}
+  .pill{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 11px;border-radius:999px;background:var(--red);color:#fff}
+  .pill.p-active{background:var(--green)}
+  .pill.p-soon{background:var(--orange)}
+  .pill.p-review{background:var(--aqua)}
+  .pill.p-plain{background:var(--mute)}
 
   .spin{width:13px;height:13px;border:2px solid var(--pale);border-top-color:var(--red);border-radius:50%;display:inline-block;animation:sp .7s linear infinite;vertical-align:-2px;margin-right:4px}
   @keyframes sp{to{transform:rotate(360deg)}}
@@ -250,10 +250,8 @@
           <label for="ref">Reference date for validity</label>
           <input type="date" id="ref">
         </div>
-        <div class="keychip">
-          <span class="dot"></span><span id="keylabel"></span>
-          <button id="changekey">Change</button>
-        </div>
+        <span id="keylabel" class="hide"></span>
+        <button id="changekey" class="hide">Change</button>
       </div>
     </div>
   </header>
